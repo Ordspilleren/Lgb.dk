@@ -60,6 +60,15 @@ body {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+a:hover {
+    color: #428bca !important;
+}
+
 /*--- HEADER ---*/
 
 header {
@@ -70,30 +79,86 @@ header {
     background-size: cover;
 }
 
+nav {
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*
 .nav-links {
-    width: 250px;
+    width: 400px;
     position: relative;
     top: 35px;
     left: 30px;
     z-index: 10;
+    padding: 5px;
+}
+*/
+
+.nav-links {
+    width: 45%;
+    float: left;
 }
 
 .nav-links li {
     display: inline-block;
     margin-right: 15px;
-    font-size: 1.125em;
+    font-size: 1em;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #000;
+    text-transform: uppercase;
+    line-height: 100px;
 }
 
 .nav-links li a {
-    color: white;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-social-icons {
+    width: 45%;
+    float: right;
+    text-align: right;
+}
+
+.nav-social-icons li {
+    display: inline-block;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #000;
+    margin-left: 15px;
+    line-height: 100px;
+}
+
+.nav-social-icons a {
+    color: #FFF;
 }
 
 .header-feature {
     position: relative;
-    top: 80px;
-    z-index: 10;
+    top: 100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 2px 2px 2px #000;
+    text-transform: uppercase;
+}
+
+.header-feature img {
+    border-radius: 60px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.feature-tagline {
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 10px 0 50px 0;
+}
+
+.feature-heading {
+    font-size: 2em;
+    font-weight: 400;
 }
 
 /*--- PROJECTS ---*/
@@ -155,14 +220,72 @@ header {
     margin-right: 10px;
 }
 
-/*--- CONTACT FORM ---*/
+/*--- ABOUT ME ---*/
 
-#contact-form-container {
+#aboutme-container {
+    clear: both;
     padding: 30px 30px 70px 30px;
     background-color: #F4F4F4;
+    display: table;
 }
 
-.contact-form-heading {
+.aboutme-heading {
     font-weight: 700;
     font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.col {
+    width: 50%;
+    float: left;
+    text-align: justify;
+    display: table-cell;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.technical {
+    border-right: 3px solid #428bca;
+}
+
+#aboutme-container h2 {
+    color: #34495e;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+#aboutme-container p {
+    line-height: 1.5em;
+}
+
+/*--- FOOTER ---*/
+
+footer {
+    clear: both;
+    background-color: #23232C;
+    border-top: 4px #428bca solid;
+    height: 100px;
+    padding: 0 50px;
+    color: #999;
+}
+
+.copyright {
+    width: 45%;
+    float: left;
+    line-height: 100px;
+}
+
+.footer-social-icons {
+    width: 45%;
+    float: right;
+    text-align: right;
+    line-height: 100px;
+    font-size: 2em;
+}
+
+.footer-social-icons li {
+    display: inline-block;
+    margin-left: 15px;
 }
