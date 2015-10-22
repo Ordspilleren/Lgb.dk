@@ -60,12 +60,12 @@ body {
     margin: 0 auto;
 }
 
-a {
+a, .header-show-menu {
     text-decoration: none;
     color: #aaa;
 }
 
-a:hover {
+a:hover, .header-show-menu:hover {
     color: #428bca !important;
 }
 
@@ -79,10 +79,55 @@ header {
     background-size: cover;
 }
 
+.header-show-menu {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: inline-block;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #000;
+    z-index: 30;
+}
+
+    @media only screen and (min-width: 750px) {
+        .header-show-menu {
+            display: none;
+        }
+    }
+
+#show-menu {
+    display: none;
+}
+
 nav {
-    height: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    min-height: 600px;
+    max-height: 800px;
+    background-color: rgba(0, 0, 0, 0.93);
+    z-index: 20;
+}
+
+    @media only screen and (min-width: 750px) {
+        nav {
+            position: inherit;
+            width: auto;
+            min-height: 100px;
+            max-height: 100px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: block;
+            background-color: transparent;
+        }
+    }
+
+#show-menu:checked + nav {
+    display: block;
 }
 
 /*
@@ -97,38 +142,61 @@ nav {
 */
 
 .nav-links {
-    width: 45%;
-    float: left;
+    position: relative;
+    top: 80px;
+    left: 30px;
 }
 
 .nav-links li {
-    display: inline-block;
-    margin-right: 15px;
+    margin-bottom: 10px;
     font-size: 1em;
     font-weight: 300;
     letter-spacing: 1px;
     text-shadow: 2px 2px 2px #000;
     text-transform: uppercase;
-    line-height: 100px;
-}
-
-.nav-links li a {
-    color: #FFF;
-    text-decoration: none;
 }
 
 .nav-social-icons {
-    width: 45%;
-    float: right;
-    text-align: right;
+    position: relative;
+    top: 120px;
+    left: 30px;
 }
 
 .nav-social-icons li {
     display: inline-block;
     font-size: 2em;
     text-shadow: 2px 2px 2px #000;
-    margin-left: 15px;
-    line-height: 100px;
+    letter-spacing: 15px;
+}
+
+@media only screen and (min-width: 750px) {
+    .nav-links {
+        position: inherit;
+        width: 45%;
+        float: left;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        margin-right: 15px;
+        line-height: 100px;
+    }
+
+    .nav-social-icons {
+        position: inherit;
+        width: 45%;
+        float: right;
+        text-align: right;
+    }
+
+    .nav-social-icons li {
+        line-height: 100px;
+    }
+}
+
+.nav-links li a {
+    color: #FFF;
+    text-decoration: none;
 }
 
 .nav-social-icons a {
