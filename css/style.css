@@ -211,6 +211,7 @@ nav {
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
     text-transform: uppercase;
+    clear: both;
 }
 
 .header-feature img {
@@ -249,15 +250,28 @@ nav {
 
 .project img {
     float: left;
-    width: 49%;
+    width: 100%;
     box-shadow: 2px 4px 8px #999;
+    margin-bottom: 10px;
 }
 
+    @media only screen and (min-width: 750px) {
+        .project img {
+            width: 49%;
+        }
+    }
+
 .project-info {
-    display: inline-block;
-    width: 45%;
-    margin-left: 25px;
+    width: 100%;
 }
+
+    @media only screen and (min-width: 750px) {
+        .project-info {
+            display: inline-block;
+            width: 45%;
+            margin-left: 25px;
+        }
+    }
 
 .project-info .project-title {
     font-size: 2em;
@@ -304,17 +318,29 @@ nav {
 }
 
 .col {
-    width: 50%;
+    width: 100%;
     float: left;
     text-align: justify;
     display: table-cell;
-    padding: 0 20px;
+    padding: 10px 0;
     box-sizing: border-box;
 }
 
 .technical {
-    border-right: 3px solid #428bca;
+    border-bottom: 3px solid #428bca;
 }
+
+    @media only screen and (min-width: 750px) {
+        .col {
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .technical {
+            border-bottom: none;
+            border-right: 3px solid #428bca;
+        }
+    }
 
 #aboutme-container h2 {
     color: #34495e;
