@@ -66,7 +66,7 @@ a, .header-show-menu {
 }
 
 a:hover, .header-show-menu:hover {
-    color: #428bca !important;
+    color: #168BBB !important;
 }
 
 /*--- HEADER ---*/
@@ -121,7 +121,8 @@ nav {
             max-height: 100px;
             padding-left: 30px;
             padding-right: 30px;
-            display: block;
+            display: flex;
+            justify-content: space-between;
             background-color: transparent;
         }
     }
@@ -169,30 +170,26 @@ nav {
     letter-spacing: 15px;
 }
 
-@media only screen and (min-width: 750px) {
-    .nav-links {
-        position: inherit;
-        width: 45%;
-        float: left;
-    }
+    @media only screen and (min-width: 750px) {
+        .nav-links {
+            position: inherit;
+        }
 
-    .nav-links li {
-        display: inline-block;
-        margin-right: 15px;
-        line-height: 100px;
-    }
+        .nav-links li {
+            display: inline-block;
+            margin-right: 15px;
+            line-height: 100px;
+        }
 
-    .nav-social-icons {
-        position: inherit;
-        width: 45%;
-        float: right;
-        text-align: right;
-    }
+        .nav-social-icons {
+            position: inherit;
+            text-align: right;
+        }
 
-    .nav-social-icons li {
-        line-height: 100px;
+        .nav-social-icons li {
+            line-height: 100px;
+        }
     }
-}
 
 .nav-links li a {
     color: #FFF;
@@ -211,7 +208,6 @@ nav {
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
     text-transform: uppercase;
-    clear: both;
 }
 
 .header-feature img {
@@ -234,42 +230,58 @@ nav {
 
 #projects-container {
     background-color: #FFFFFD;
-    padding: 30px 30px 70px 30px;
+    padding: 30px 0 70px 0;
 }
 
 .projects-heading {
     font-weight: 700;
     font-size: 2.5em;
+    padding: 0 30px 30px 30px;
 }
 
 .project {
-    clear: both;
     min-height: 300px;
-    margin-top: 60px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project:nth-child(odd) {
+    background-color: #F8F8F8;
 }
 
 .project img {
-    float: left;
-    width: 100%;
     box-shadow: 2px 4px 8px #999;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    max-width: 100%;
 }
-
-    @media only screen and (min-width: 750px) {
-        .project img {
-            width: 49%;
-        }
-    }
 
 .project-info {
-    width: 100%;
+    margin-left: 30px;
 }
 
     @media only screen and (min-width: 750px) {
+        .project {
+            flex-direction: row;
+            padding: 30px;
+        }
+
+        .project:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .project:nth-child(odd) .project-info {
+            margin: 0 25px 0 0;
+        }
+
+        .project img {
+            margin-bottom: 0;
+            flex: 0 1 auto;
+        }
+
         .project-info {
-            display: inline-block;
-            width: 45%;
             margin-left: 25px;
+            flex: 1 0 auto;
         }
     }
 
@@ -285,11 +297,12 @@ nav {
 
 .project-tags li {
     display: inline-block;
-    background-color: #428BCA;
+    background-color: #168BBB;
     padding: 5px 7px;
     border-radius: 5px;
     font-weight: 300;
     color: #FFF;
+    text-shadow: 2px 2px 2px #000;
     text-transform: uppercase;
 }
 
@@ -305,10 +318,8 @@ nav {
 /*--- ABOUT ME ---*/
 
 #aboutme-container {
-    clear: both;
     padding: 30px 30px 70px 30px;
     background-color: #F4F4F4;
-    display: table;
 }
 
 .aboutme-heading {
@@ -317,28 +328,35 @@ nav {
     margin-bottom: 20px;
 }
 
-.col {
-    width: 100%;
-    float: left;
-    text-align: justify;
-    display: table-cell;
-    padding: 10px 0;
-    box-sizing: border-box;
+.aboutme-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .technical {
-    border-bottom: 3px solid #428bca;
+    border-bottom: 3px solid #168BBB;
+    padding-bottom: 10px;
+}
+
+.non-technical {
+    padding-top: 10px;
 }
 
     @media only screen and (min-width: 750px) {
-        .col {
-            width: 50%;
-            padding: 0 20px;
+        .aboutme-content {
+            flex-direction: row;
         }
 
         .technical {
             border-bottom: none;
-            border-right: 3px solid #428bca;
+            border-right: 3px solid #168BBB;
+            padding-right: 10px;
+            flex: 1 100%;
+        }
+
+        .non-technical {
+            padding-left: 10px;
+            flex: 1 100%;
         }
     }
 
@@ -357,23 +375,20 @@ nav {
 /*--- FOOTER ---*/
 
 footer {
-    clear: both;
     background-color: #23232C;
-    border-top: 4px #428bca solid;
+    border-top: 4px #168BBB solid;
     height: 100px;
-    padding: 0 50px;
+    padding: 0 30px;
     color: #999;
+    display: flex;
+    justify-content: space-between;
 }
 
 .copyright {
-    width: 45%;
-    float: left;
     line-height: 100px;
 }
 
 .footer-social-icons {
-    width: 45%;
-    float: right;
     text-align: right;
     line-height: 100px;
     font-size: 2em;
