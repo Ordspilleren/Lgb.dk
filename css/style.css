@@ -257,7 +257,7 @@ nav {
 }
 
 .project-info {
-    margin-left: 30px;
+    margin: 0 30px;
 }
 
     @media only screen and (min-width: 750px) {
@@ -276,12 +276,12 @@ nav {
 
         .project img {
             margin-bottom: 0;
-            flex: 0 1 auto;
+            flex: 1 1 100%;
         }
 
         .project-info {
             margin-left: 25px;
-            flex: 1 0 auto;
+            flex: 1 1 100%;
         }
     }
 
@@ -308,6 +308,8 @@ nav {
 
 .project-info p {
     margin: 20px 0 10px 0;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .project-links li {
