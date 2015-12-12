@@ -77,7 +77,15 @@ header {
     background-image: url('../img/header-bg.jpg');
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
+
+    @media only screen and (min-width: 750px) {
+        header {
+            padding: 0 30px;
+        }
+    }
 
 .header-show-menu {
     position: absolute;
@@ -105,8 +113,8 @@ header {
 
 nav {
     position: absolute;
-    display: none;
     width: 100%;
+    display: none;
     min-height: 600px;
     max-height: 800px;
     background-color: rgba(0, 0, 0, 0.93);
@@ -115,12 +123,10 @@ nav {
 
     @media only screen and (min-width: 750px) {
         nav {
-            position: inherit;
+            position: static;
             width: auto;
             min-height: 100px;
             max-height: 100px;
-            padding-left: 30px;
-            padding-right: 30px;
             display: flex;
             justify-content: space-between;
             background-color: transparent;
@@ -201,9 +207,7 @@ nav {
 }
 
 .header-feature {
-    position: relative;
-    top: 100px;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
@@ -309,7 +313,6 @@ nav {
 .project-info p {
     margin: 20px 0 10px 0;
     word-wrap: break-word;
-    overflow: hidden;
 }
 
 .project-links li {
@@ -358,6 +361,7 @@ nav {
 
         .non-technical {
             padding-left: 10px;
+            padding-top: 0;
             flex: 1 100%;
         }
     }
@@ -377,7 +381,7 @@ nav {
 /*--- FOOTER ---*/
 
 footer {
-    background-color: #23232C;
+    background-color: #1A1A1A;
     border-top: 4px #168BBB solid;
     height: 100px;
     padding: 0 30px;
