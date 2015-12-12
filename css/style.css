@@ -58,6 +58,7 @@ body {
 .main-container {
     max-width: 1300px;
     margin: 0 auto;
+    box-shadow: 0 0 8px 3px #DDD;
 }
 
 a, .header-show-menu {
@@ -324,7 +325,7 @@ nav {
 
 #aboutme-container {
     padding: 30px 30px 70px 30px;
-    background-color: #F4F4F4;
+    background-color: #F8F8F8;
 }
 
 .aboutme-heading {
@@ -381,10 +382,11 @@ nav {
 /*--- FOOTER ---*/
 
 footer {
-    background-color: #1A1A1A;
-    border-top: 4px #168BBB solid;
+    /*background-color: #1A1A1A;*/
+    /*border-top: 4px #168BBB solid;*/
+    box-shadow: none !important;
     height: 100px;
-    padding: 0 30px;
+    /*padding: 0 30px;*/
     color: #999;
     display: flex;
     justify-content: space-between;
@@ -392,12 +394,14 @@ footer {
 
 .copyright {
     line-height: 100px;
+    padding-left: 30px;
 }
 
 .footer-social-icons {
     text-align: right;
     line-height: 100px;
     font-size: 2em;
+    padding-right: 30px;
 }
 
 .footer-social-icons li {
