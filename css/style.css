@@ -238,14 +238,14 @@ nav {
     padding: 30px 0 70px 0;
 }
 
-.projects-heading {
+#projects-container h1 {
     font-weight: 700;
     font-size: 2.5em;
     padding: 0 30px 30px 30px;
 }
 
 .project {
-    min-height: 300px;
+    /*min-height: 300px;*/
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -258,7 +258,7 @@ nav {
 .project img {
     box-shadow: 2px 4px 8px #999;
     margin-bottom: 25px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .project-info {
@@ -281,16 +281,16 @@ nav {
 
         .project img {
             margin-bottom: 0;
-            flex: 1 1 100%;
+            flex: 1 1 50%;
         }
 
         .project-info {
             margin-left: 25px;
-            flex: 1 1 100%;
+            flex: 1 1 50%;
         }
     }
 
-.project-info .project-title {
+.project-info h2 {
     font-size: 2em;
     font-weight: 400;
     margin-bottom: 10px;
@@ -328,7 +328,7 @@ nav {
     background-color: #F8F8F8;
 }
 
-.aboutme-heading {
+#aboutme-container h1 {
     font-weight: 700;
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -342,6 +342,23 @@ nav {
 .technical {
     border-bottom: 3px solid #168BBB;
     padding-bottom: 10px;
+}
+
+.technical p {
+    margin: 10px 0;
+}
+
+.technical span {
+    text-decoration: underline;
+}
+
+.technical ul {
+    list-style: disc;
+    padding-left: 50px;
+}
+
+.technical li {
+    margin-bottom: 5px;
 }
 
 .non-technical {
@@ -390,6 +407,7 @@ footer {
     color: #999;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .copyright {
