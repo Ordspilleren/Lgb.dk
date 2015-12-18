@@ -75,7 +75,7 @@ a:hover, .header-show-menu:hover {
 header {
     min-height: 600px;
     max-height: 800px;
-    background-image: url('../img/header-bg2.jpg');
+    background-image: url('../img/header-bg.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
