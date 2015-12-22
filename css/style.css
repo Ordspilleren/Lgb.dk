@@ -75,6 +75,7 @@ a:hover, .header-show-menu:hover {
 header {
     min-height: 600px;
     max-height: 800px;
+    height: 100vh;
     background-image: url('../img/header-bg.jpg');
     background-position: center;
     background-size: cover;
@@ -84,6 +85,7 @@ header {
 
     @media only screen and (min-width: 750px) {
         header {
+            height: 50vh;
             padding: 0 30px;
         }
     }
@@ -116,8 +118,7 @@ nav {
     position: absolute;
     width: 100%;
     display: none;
-    min-height: 600px;
-    max-height: 800px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.93);
     z-index: 20;
 }
@@ -151,8 +152,7 @@ nav {
 
 .nav-links {
     position: relative;
-    top: 80px;
-    left: 30px;
+    margin: 80px 0 0 30px;
 }
 
 .nav-links li {
@@ -166,8 +166,7 @@ nav {
 
 .nav-social-icons {
     position: relative;
-    top: 120px;
-    left: 30px;
+    margin: 120px 0 0 30px;
 }
 
 .nav-social-icons li {
@@ -180,6 +179,7 @@ nav {
     @media only screen and (min-width: 750px) {
         .nav-links {
             position: inherit;
+            margin: 0;
         }
 
         .nav-links li {
@@ -190,6 +190,7 @@ nav {
 
         .nav-social-icons {
             position: inherit;
+            margin: 0;
             text-align: right;
         }
 
