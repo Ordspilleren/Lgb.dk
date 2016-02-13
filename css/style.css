@@ -52,7 +52,7 @@ table {
 body {
     background-color: #EEE;
     color: #2C2C27;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main-container {
@@ -317,6 +317,7 @@ nav {
 .project-info p {
     margin: 20px 0 10px 0;
     word-wrap: break-word;
+    line-height: normal;
 }
 
 .project-links li {
@@ -349,6 +350,8 @@ nav {
 
 .aboutme-content p {
     margin: 10px 0;
+    line-height: normal;
+    text-align: justify;
 }
 
 .technical span {
@@ -393,10 +396,6 @@ nav {
     font-size: 2em;
     margin-bottom: 20px;
     font-weight: 300;
-}
-
-#aboutme-container p {
-    line-height: 1.5em;
 }
 
 /*--- FOOTER ---*/
