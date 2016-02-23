@@ -1,0 +1,3 @@
+title: Raspberry Pi Doorbell
+img: rpidoorbell.png
+description: The Raspberry Pi doorbell was a fun little side project I did. The doorbell in our house is too far away for me to hear it when I am in my room, so I thought it would be cool to get a notification on my smartphone when someone was at the door. The hardware was done with some very simple soldering and a couple of wires. For the software I used Python.
