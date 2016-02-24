@@ -1,3 +1,7 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://lgb.dk"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Lasse Bjerre Portfolio"
+disqusShortname = "lgbdk"
+
+[author]
+    name = "Lasse Bjerre"
