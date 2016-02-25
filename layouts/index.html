@@ -8,16 +8,23 @@
         <div class="project-info">
             <h2>{{ .title }}</h2>
             <ul class="project-tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>PHP</li>
+            {{ range $index, $tag := .tags }}
+                <li>{{ $tag }}</li>
+            {{ end }}
             </ul>
             <p>
                 {{ .description }}
             </p>
             <ul class="project-links">
-                <li><a href="http://blog.lgb.dk/raspberry-pi-smartphone-doorbell"><i class="fa fa-rss-square"></i> Blog post</a></li>
+            {{ if .blogPost }}
+                <li><a href="{{ .blogPost }}"><i class="fa fa-rss-square"></i> Blog post</a></li>
+            {{ end }}
+            {{ if .github }}
+                <li><a href="{{ .github }}"><i class="fa fa-github"></i> Github</a></li>
+            {{ end }}
+            {{ if .website }}
+                <li><a href="{{ .website }}">Website</a></li>
+            {{ end }}
             </ul>
         </div>
     </article>

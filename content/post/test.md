@@ -1,35 +1,64 @@
 ---
-date: 2014-09-03T12:09:03-04:00
+date: 2015-03-02T16:08:29+01:00
 description: ""
 tags:
 - go
 - development
 - conference
 - mongodb
-title: OSCON 2014
+title: Moving from Ghost to HUGO
 topics:
 - Development
 - golang
 - mongodb
 draft: false
+image: /img/eventit.png
 ---
 
-I had the great opportunity to not only attend OSCON this year, but also be a
-speaker. As always, OSCON was a conference not to be missed. In my opinion it
-was the best conference of the year.
+I started to blog 11 years ago.
+The first blog system i used, was Dotclear, I moved to Wordpress few years after because of the large plugin and theme ressources available.
+Wordpress is a really good blog platform, but it updates itslef too often for me.
 
-Rather than providing a play by play I wanted to talk about some of the
-highlights from my perspective.
+Few months ago, the blog moved to [Ghost](https://ghost.org), a really minimalist blog system, based on nodejs.
+A KISS aproach to the blog, I falled in love.
+The only issue i had with Ghost was about the hosting dependencies, no hard to manage, but since i don't master nodeJs, i spent too much hours to hack into.
 
-One of the things I appreciate most about OSCON is the diversity, both in the
-usual sense (gender, race, etc) but also a wide diversity of interests and
-backgrounds.
+I discovered HUGO.
+Hugo is a static blog generator, written with a language (GOLANG), i use everyday.
 
-It started out strong. I ran the 5k glow run with Francesk from Google,
-our new friend Sarah and about 500 other people. Due to a measuring
-error it was actually closer to 6k which was further than I had ran in a
-long time.
+So, i moved from GHOST to HUGO hosted on Google App engine.
 
-The next morning I gave the first of my 3 talks, a workshop on building
-your fist Go application using MongoDB. There was a lot of enthusiasm
-and interest around both Go and MongoDB.
+## Ghost migration to Hugo
+Ghost and Hugo share the same markdown notation for posts content.
+The fist thing to do : extract posts from Ghost db (sqlite) to individual .md files and move them to HUGO/content/post/ folder.
+
+The code I used to achieve this is here : [GHOST_TO_HUGO.php](https://gist.github.com/vjeantet/d1f6cf824a2344dd6b4e)
+
+Next step, move GHOST/content directory to HUGO/static directory.
+This way all references like images keep working.
+
+Migration completed !
+
+## Theme
+The default theme on ghost was perfect for my blog, but unavailable on HUGO… So i ported the casper theme from GHOST to HUGO, you can find it here : [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper)
+
+## Publishing
+### Google App Engine
+I put my GAE configuration file **app.yaml**  into the HUGO/static directory, to see it pushed when hugo generate the static site.
+
+To publish it online, i run the [deploy.sh script](https://github.com/vjeantet/vjeantet.fr/blob/master/deploy.sh) to
+
+* stage/commit/push contents changes to my git repo
+* deploy the public directory to Google App Engine
+
+```
+$ ./deploy.sh
+```
+
+This Blog is now Proudly published with [HUGO](http://gohugo.io), with a Casper theme and hosted on Google App Engine.
+
+### Github
+You can publish your site to github.io, see documentation here : [Hosting on GitHub Pages](http://gohugo.io/tutorials/github-pages-blog/)
+
+## Source code
+All source code from for this blog, app.yaml, deploy.sh, content and theme are on github : [github.com/vjeantet/vjeantet.fr](https://github.com/vjeantet/vjeantet.fr)

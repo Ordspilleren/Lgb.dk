@@ -1,0 +1,9 @@
+title: Crowdsourced Event System
+tags:
+- HTML
+- CSS
+- Bootstrap
+- PHP
+github: https://github.com/Ordspilleren/AalborgEvents
+img: eventit.png
+description: A semester project called "Event it". The goal was to create a crowdsourced event system that would allow citizens of Aalborg to keep in touch with upcoming events.

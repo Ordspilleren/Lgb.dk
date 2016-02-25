@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/github-markdown.css" media="screen" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Lasse Bjerre | Portfolio</title>
@@ -11,7 +12,11 @@
 <body>
 
     <div class="main-container">
-        <header>
+        {{ if .Params.image }}
+        <header class="site-header" style="background-image: url({{ .Site.BaseURL }}{{ .Params.image }})">
+        {{ else }}
+        <header class="site-header">
+        {{ end }}
             <label for="show-menu" class="header-show-menu">Menu</label>
             <input type="checkbox" id="show-menu" role="button">
             <nav>
@@ -29,9 +34,13 @@
                     <li><a href="mailto:lasse@lgb.dk"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </nav>
+            {{ if not .Params.image }}
             <div class="header-feature">
                 <img src="/img/profile.jpg" />
-                <h2 class="feature-tagline">Lasse Bjerre</h2>
+                <h2 class="feature-tagline">{{ .Site.Author.name }}</h2>
                 <h1 class="feature-heading">Portfolio</h1>
             </div>
+            {{ end }}
         </header>
+
+        <main class="content">

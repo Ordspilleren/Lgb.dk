@@ -1,12 +1,34 @@
 {{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+{{ $author := index .Site.Author }}
 
-<section id="main">
-  <h1 itemprop="name" id="title">{{ .Title }}</h1>
-  <div>
-        <article itemprop="articleBody" id="content">
-           {{ .Content }}
-        </article>
-  </div>
-</section>
+<article class="post {{ .Section }}">
+    <header class="post-header">
+        <h1 class="post-title">{{.Title}}</h1>
+        <small>{{.Description}}</small>
+
+        <section class="post-meta">
+            <img class="author-thumb" src="/img/profile.jpg" alt="Author image" nopin="nopin" />
+            {{ $author.name }}
+
+            {{if .Params.tags }}on
+                {{ range $index, $tag := .Params.tags }}
+                    &nbsp;<a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
+                {{ end }}
+            {{end}}
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+                {{ .Date.Format "2 Jan 2006" }}
+            </time>
+        </section>
+    </header>
+
+    <section class="post-content markdown-body">
+        {{ .Content }}
+    </section>
+
+    <footer class="post-footer">
+        {{ partial "disqus.html" . }}
+    </footer>
+</article>
 
 {{ partial "footer.html" . }}
