@@ -8,12 +8,12 @@
         <small>{{.Description}}</small>
 
         <section class="post-meta">
-            <img class="author-thumb" src="/img/profile.jpg" alt="Author image" nopin="nopin" />
+            <img class="author-thumb" src="{{ .Site.BaseURL }}{{ .Site.Author.profilePicture }}" alt="Author image" nopin="nopin" />
             {{ $author.name }}
 
             {{if .Params.tags }}on
                 {{ range $index, $tag := .Params.tags }}
-                    &nbsp;<a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
+                    &nbsp;<a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
                 {{ end }}
             {{end}}
             <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">

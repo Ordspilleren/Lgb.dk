@@ -11,7 +11,7 @@ topics:
 - Python
 - Raspberry Pi
 draft: false
-image: /media/raspberry-pi-smartphone-doorbell/raspberry-pi-smartphone-doorbell.jpg
+cover: /media/raspberry-pi-smartphone-doorbell/raspberry-pi-smartphone-doorbell.jpg
 ---
 
 At home we have a doorbell that does not have sufficient range to be placed anywhere in the house, and it can be pretty difficult to hear when you are far away from it (or listening to music for that matter). I thought it would be pretty cool to have your smartphone alert you when someone is ringing the doorbell to avoid those issues; you have your phone on you at all times anyways. I figured this could be done with my Raspberry Pi, and indeed it could. You will need the following to complete this project

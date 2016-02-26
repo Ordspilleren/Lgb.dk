@@ -12,8 +12,8 @@
 <body>
 
     <div class="main-container">
-        {{ if .Params.image }}
-        <header class="site-header" style="background-image: url({{ .Site.BaseURL }}{{ .Params.image }})">
+        {{ if .Params.cover }}
+        <header class="site-header" style="background-image: url({{ .Site.BaseURL }}{{ .Params.cover }})">
         {{ else }}
         <header class="site-header">
         {{ end }}
@@ -22,21 +22,21 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#projects-container">Projects</a></li>
-                    <li><a href="#aboutme-container">About Me</a></li>
+                    <li><a href="/#projects-container">Projects</a></li>
+                    <li><a href="/#aboutme-container">About Me</a></li>
                     <li><a href="/post">Blog</a></li>
                 </ul>
                 <ul class="nav-social-icons">
-                    <li><a href="https://github.com/Ordspilleren"><i class="fa fa-github"></i></a></li>
-                    <li><a href="http://steamcommunity.com/id/lgb/"><i class="fa fa-steam"></i></a></li>
-                    <li><a href="https://twitter.com/Ordspilleren"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://dk.linkedin.com/in/lasse-bjerre-93294896"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="mailto:lasse@lgb.dk"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="{{ .Site.Author.github }}"><i class="fa fa-github"></i></a></li>
+                    <li><a href="{{ .Site.Author.steam }}"><i class="fa fa-steam"></i></a></li>
+                    <li><a href="{{ .Site.Author.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="{{ .Site.Author.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="mailto:{{ .Site.Author.mail }}"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </nav>
-            {{ if not .Params.image }}
+            {{ if not .Params.cover }}
             <div class="header-feature">
-                <img src="/img/profile.jpg" />
+                <img src="{{ .Site.BaseURL }}{{ .Site.Author.profilePicture }}" />
                 <h2 class="feature-tagline">{{ .Site.Author.name }}</h2>
                 <h1 class="feature-heading">Portfolio</h1>
             </div>

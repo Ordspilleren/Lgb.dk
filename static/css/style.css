@@ -250,12 +250,12 @@ nav {
 #projects-container h1 {
     font-weight: 700;
     font-size: 2.5em;
-    padding: 0 30px 30px 30px;
+    padding: 0 30px 0 30px;
 }
 
 .project {
     /*min-height: 300px;*/
-    padding-bottom: 30px;
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
 }
@@ -414,6 +414,14 @@ nav {
     /*padding-bottom: 2rem;*/
 }
 
+/*
+.post-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+
 .post-title {
     font-size: 2em;
     font-weight: 700;
@@ -421,7 +429,7 @@ nav {
 }
 
 .post-title a {
-    color: #000;
+    color: #4A4A4A;
 }
 
 .post-excerpt {
@@ -430,7 +438,7 @@ nav {
 }
 
 .post-content {
-    padding-top: 10px;
+    padding-top: 30px;
     margin-bottom: 30px;
     line-height: normal;
 }

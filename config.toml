@@ -3,5 +3,13 @@ languageCode = "en-us"
 title = "Lasse Bjerre Portfolio"
 disqusShortname = "lgbdk"
 
+[params]
+
 [author]
     name = "Lasse Bjerre"
+    profilePicture = "/img/profile.jpg"
+    mail = "lasse@lgb.dk"
+    twitter = "https://twitter.com/Ordspilleren"
+    github = "https://github.com/Ordspilleren"
+    steam = "http://steamcommunity.com/id/lgb/"
+    linkedin = "https://dk.linkedin.com/in/lasse-bjerre-93294896"
