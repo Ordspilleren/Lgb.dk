@@ -1,7 +1,7 @@
 .markdown-body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  color: #333;
+  color: #444;
   word-wrap: break-word;
 }
 
@@ -540,7 +540,7 @@
 
 .markdown-body .pl-s .pl-s1,
 .markdown-body .pl-smi {
-  color: #333;
+  color: #444;
 }
 
 .markdown-body .pl-ent {
@@ -595,12 +595,12 @@
 }
 
 .markdown-body .pl-mi {
-  color: #333;
+  color: #444;
   font-style: italic;
 }
 
 .markdown-body .pl-mb {
-  color: #333;
+  color: #444;
   font-weight: bold;
 }
 

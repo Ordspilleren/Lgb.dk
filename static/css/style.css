@@ -51,7 +51,7 @@ table {
 
 body {
     background-color: #EEE;
-    color: #2C2C27;
+    color: #444;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -407,10 +407,11 @@ nav {
 
 .post {
     padding: 2rem 30px;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     border-bottom: #EBF2F6 1px solid;
-    /*padding-bottom: 2rem;*/
 }
 
 /*
