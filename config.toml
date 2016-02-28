@@ -1,9 +1,10 @@
-baseurl = "http://lgb.dk"
+baseurl = "https://lgb.dk"
 languageCode = "en-us"
 title = "Lasse Bjerre Portfolio"
 disqusShortname = "lgbdk"
 
 [params]
+    tagline = "Portfolio"
 
 [author]
     name = "Lasse Bjerre"

@@ -2,18 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <base href="{{ .Site.BaseURL }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/github-markdown.css" media="screen" charset="utf-8">
+    {{ if .IsPage }}<link rel="stylesheet" href="/css/github-markdown.css" media="screen" charset="utf-8">{{ end }}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <title>Lasse Bjerre | Portfolio</title>
+    <title>{{ .Site.Title }}</title>
 </head>
 <body>
 
     <div class="main-container">
         {{ if .Params.cover }}
-        <header class="site-header" style="background-image: url({{ .Site.BaseURL }}{{ .Params.cover }})">
+        <header class="site-header" style="background-image: url({{ .Params.cover }})">
         {{ else }}
         <header class="site-header">
         {{ end }}
@@ -36,9 +37,9 @@
             </nav>
             {{ if not .Params.cover }}
             <div class="header-feature">
-                <img src="{{ .Site.BaseURL }}{{ .Site.Author.profilePicture }}" />
-                <h2 class="feature-tagline">{{ .Site.Author.name }}</h2>
-                <h1 class="feature-heading">Portfolio</h1>
+                <img src="{{ .Site.Author.profilePicture }}" />
+                <h1 class="feature-heading">{{ .Site.Author.name }}</h1>
+                <h2 class="feature-tagline">{{ .Site.Params.tagline }}</h2>
             </div>
             {{ end }}
         </header>

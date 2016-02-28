@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL }}
 {{ $author := index .Site.Author }}
 
 {{ range first 10 .Data.Pages }}
@@ -12,12 +11,12 @@
         <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">Read more →</a></p>
     </section>
     <footer class="post-meta">
-        <img class="author-thumb" src="{{ .Site.BaseURL }}{{ .Site.Author.profilePicture }}" alt="Author image" nopin="nopin" />
+        <img class="author-thumb" src="{{ .Site.Author.profilePicture }}" alt="Author image" nopin="nopin" />
         {{ $author.name }}
 
         {{if .Params.tags }}on
             {{ range $index, $tag := .Params.tags }}
-                &nbsp;<a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
+                &nbsp;<a href="/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
             {{ end }}
         {{end}}
         <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">

@@ -3,4 +3,4 @@ tags:
 - C#
 github: https://github.com/Ordspilleren/LivestreamerSpotlight
 img: livestreamerspotlight.png
-description: Livestreamer Spotlight is an application I created out of my own fustration with other similar offerings. It allows you to watch streams from popular sites such as Twitch.tv and Hitbox.tv in your favorite video player. The application was made with C#, with a frontend made in .NET's WPF. The intend is to eventually make the application cross-platform.
+description: Livestreamer Spotlight is an application I created out of my own fustration with other similar offerings. It allows you to watch streams from popular sites such as Twitch.tv and Hitbox.tv in your favorite video player. The application was made with C#, with a frontend made in .NET's WPF. The intent is to eventually make the application cross-platform.

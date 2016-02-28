@@ -226,12 +226,12 @@ nav {
 .feature-tagline {
     font-size: 1.5em;
     font-weight: 300;
-    padding: 10px 0 50px 0;
 }
 
 .feature-heading {
     font-size: 2em;
     font-weight: 400;
+    padding: 10px 0;
 }
 
 /*--- CONTENT ---*/
@@ -243,8 +243,7 @@ nav {
 /*--- PROJECTS ---*/
 
 #projects-container {
-    background-color: #FFFFFD;
-    padding: 30px 0 0 0;
+    padding-top: 30px;
 }
 
 #projects-container h1 {
@@ -447,7 +446,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     line-height: 30px;
-    color: #9EABB3;
+    color: #aaa;
     font-size: 0.9em;
 }
 

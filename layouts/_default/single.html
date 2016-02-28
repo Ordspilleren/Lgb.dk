@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL }}
 {{ $author := index .Site.Author }}
 
 <article class="post {{ .Section }}">
@@ -8,12 +7,12 @@
         <small>{{.Description}}</small>
 
         <section class="post-meta">
-            <img class="author-thumb" src="{{ .Site.BaseURL }}{{ .Site.Author.profilePicture }}" alt="Author image" nopin="nopin" />
+            <img class="author-thumb" src="{{ .Site.Author.profilePicture }}" alt="Author image" nopin="nopin" />
             {{ $author.name }}
 
             {{if .Params.tags }}on
                 {{ range $index, $tag := .Params.tags }}
-                    &nbsp;<a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
+                    &nbsp;<a href="/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
                 {{ end }}
             {{end}}
             <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
@@ -27,7 +26,7 @@
     </section>
 
     <footer class="post-footer">
-        {{ partial "disqus.html" . }}
+        {{ template "_internal/disqus.html" . }}
     </footer>
 </article>
 
