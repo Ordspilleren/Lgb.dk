@@ -13,8 +13,8 @@
 <body>
 
     <div class="main-container">
-        {{ if .Params.cover }}
-        <header class="site-header" style="background-image: url({{ .Params.cover }})">
+        {{ if not .IsHome }}
+        <header class="site-header post-header" {{ if .Params.cover }}style="background-image: url({{ .Params.cover }})"{{ end }}>
         {{ else }}
         <header class="site-header">
         {{ end }}

@@ -50,15 +50,13 @@ table {
 /*--- GENERAL STUFF ---*/
 
 body {
-    background-color: #EEE;
+    background-color: #fafafa;
     color: #444;
     font-family: 'Open Sans', sans-serif;
 }
 
 .main-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    box-shadow: 0 0 8px 3px #DDD;
+    background-color: #fff;
 }
 
 a, .header-show-menu {
@@ -73,9 +71,8 @@ a:hover, .header-show-menu:hover {
 /*--- HEADER ---*/
 
 .site-header {
-    min-height: 600px;
-    max-height: 800px;
     height: 100vh;
+    min-height: 600px;
     background-image: url('../img/header-bg.jpg');
     background-position: center;
     background-size: cover;
@@ -85,10 +82,13 @@ a:hover, .header-show-menu:hover {
 
     @media only screen and (min-width: 750px) {
         .site-header {
-            height: 50vh;
             padding: 0 30px;
         }
     }
+
+.site-header.post-header {
+    height: 50vh;
+}
 
 .header-show-menu {
     position: absolute;
@@ -237,7 +237,8 @@ nav {
 /*--- CONTENT ---*/
 
 .content {
-    background-color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 /*--- PROJECTS ---*/
@@ -260,7 +261,7 @@ nav {
 }
 
 .project:nth-child(odd) {
-    background-color: #F8F8F8;
+    /*background-color: #F8F8F8;*/
 }
 
 .project img {
@@ -334,7 +335,6 @@ nav {
 
 #aboutme-container {
     padding: 30px 30px 70px 30px;
-    background-color: #fdfdfd;
 }
 
 #aboutme-container h1 {
@@ -471,7 +471,8 @@ nav {
 .site-footer {
     /*background-color: #1A1A1A;*/
     /*border-top: 4px #168BBB solid;*/
-    box-shadow: none !important;
+    background-color: #fafafa;
+    box-shadow: inset 0 10px 10px -10px #DDD;
     height: 100px;
     /*padding: 0 30px;*/
     color: #999;

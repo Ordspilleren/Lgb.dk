@@ -1,14 +1,14 @@
     </main>
+    <footer class="site-footer">
+        <p class="copyright">&copy; {{ .Now.Year }} {{ .Site.Author.name }}. All Rights Reserved.</p>
+        <ul class="footer-social-icons">
+            <li><a href="{{ .Site.Author.github }}"><i class="fa fa-github"></i></a></li>
+            <li><a href="{{ .Site.Author.steam }}"><i class="fa fa-steam"></i></a></li>
+            <li><a href="{{ .Site.Author.twitter }}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="{{ .Site.Author.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:{{ .Site.Author.mail }}"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+    </footer>
 </div>
-<footer class="site-footer main-container">
-    <p class="copyright">&copy; {{ .Now.Year }} {{ .Site.Author.name }}. All Rights Reserved.</p>
-    <ul class="footer-social-icons">
-        <li><a href="{{ .Site.Author.github }}"><i class="fa fa-github"></i></a></li>
-        <li><a href="{{ .Site.Author.steam }}"><i class="fa fa-steam"></i></a></li>
-        <li><a href="{{ .Site.Author.twitter }}"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="{{ .Site.Author.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="mailto:{{ .Site.Author.mail }}"><i class="fa fa-envelope"></i></a></li>
-    </ul>
-</footer>
 </body>
 </html>
