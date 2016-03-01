@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ $author := index .Site.Author }}
 
-<article class="post {{ .Section }}">
+<article class="container post {{ .Section }}">
     <header class="post-header">
         <h1 class="post-title">{{.Title}}</h1>
         <small>{{.Description}}</small>

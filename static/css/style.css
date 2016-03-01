@@ -48,15 +48,25 @@ table {
 }
 
 /*--- GENERAL STUFF ---*/
+html {
+    background-color: #eee;
+}
 
 body {
-    background-color: #fafafa;
+    background-color: #fff;
     color: #444;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .main-container {
     background-color: #fff;
+}
+
+.container {
+    /*width: 100%;*/
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 a, .header-show-menu {
@@ -248,16 +258,18 @@ nav {
         }
     }
 
+body>section,article {
+    padding: 2em 20px;
+}
+
 /*--- PROJECTS ---*/
 
 #projects-container {
-    margin: 2rem 0;
 }
 
 #projects-container h1 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.5em;
-    padding: 0 30px;
 }
 
 .project {
@@ -282,11 +294,6 @@ nav {
 }
 
     @media only screen and (min-width: 750px) {
-
-        #projects-container h1 {
-            padding: 0;
-        }
-
         .project {
             flex-direction: row;
         }
@@ -345,13 +352,16 @@ nav {
 /*--- ABOUT ME ---*/
 
 #aboutme-container {
-    margin: 2rem 30px;
+    background: #34495e;
+    color: #bdc3c7;
+    font-weight: 300;
 }
 
 #aboutme-container h1 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #ecf0f1;
 }
 
 .aboutme-content {
@@ -388,9 +398,6 @@ nav {
 }
 
     @media only screen and (min-width: 750px) {
-        #aboutme-container {
-            margin: 2rem 0;
-        }
         .aboutme-content {
             flex-direction: row;
         }
@@ -410,29 +417,22 @@ nav {
     }
 
 #aboutme-container h2 {
-    color: #34495e;
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
     font-weight: 300;
+    color: #ecf0f1;
 }
 
 /*--- BLOG ---*/
 
 .post {
-    padding: 0 30px 2rem 30px;
+    padding-bottom: 2rem;
     max-width: 800px;
-    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     border-bottom: #EBF2F6 1px solid;
 }
-
-    @media only screen and (min-width: 750px) {
-        .post {
-            padding: 0 0 2rem 0;
-        }
-    }
 
 /*
 .post-header {
@@ -444,7 +444,7 @@ nav {
 
 .post-title {
     font-size: 2em;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -490,7 +490,7 @@ nav {
 .site-footer {
     /*background-color: #1A1A1A;*/
     /*border-top: 4px #168BBB solid;*/
-    background-color: #fafafa;
+    background-color: #eee;
     box-shadow: inset 0 10px 10px -10px #DDD;
     height: 100px;
     /*padding: 0 30px;*/
