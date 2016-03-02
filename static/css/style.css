@@ -59,14 +59,14 @@ body {
     font-weight: 400;
 }
 
-.main-container {
-    background-color: #fff;
-}
-
 .container {
     /*width: 100%;*/
     max-width: 1300px;
     margin: 0 auto;
+}
+
+body>section,article {
+    padding: 2em 20px;
 }
 
 a, .header-show-menu {
@@ -76,6 +76,21 @@ a, .header-show-menu {
 
 a:hover, .header-show-menu:hover {
     color: #3498DB !important;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 300;
 }
 
 /*--- HEADER ---*/
@@ -149,17 +164,6 @@ nav {
     display: block;
 }
 
-/*
-.nav-links {
-    width: 400px;
-    position: relative;
-    top: 35px;
-    left: 30px;
-    z-index: 10;
-    padding: 5px;
-}
-*/
-
 .nav-links {
     position: relative;
     margin: 80px 0 0 30px;
@@ -183,7 +187,7 @@ nav {
     display: inline-block;
     font-size: 2em;
     text-shadow: 2px 2px 2px #000;
-    letter-spacing: 15px;
+    margin: 0 15px 0 0;
 }
 
     @media only screen and (min-width: 750px) {
@@ -206,6 +210,7 @@ nav {
 
         .nav-social-icons li {
             line-height: 100px;
+            margin: 0 0 0 15px;
         }
     }
 
@@ -244,44 +249,22 @@ nav {
     padding: 10px 0;
 }
 
-/*--- CONTENT ---*/
-
-.content {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-    @media only screen and (min-width: 750px) {
-        .content {
-            padding: 0 30px;
-        }
-    }
-
-body>section,article {
-    padding: 2em 20px;
-}
-
 /*--- PROJECTS ---*/
 
-#projects-container {
-}
-
-#projects-container h1 {
-    font-weight: 600;
-    font-size: 2.5em;
+#projects {
 }
 
 .project {
-    /*min-height: 300px;*/
     padding: 30px 0;
     display: flex;
     flex-direction: column;
 }
 
+/*
 .project:nth-child(odd) {
-    /*background-color: #F8F8F8;*/
+    background-color: #F8F8F8;
 }
+*/
 
 .project img {
     box-shadow: 2px 4px 8px #999;
@@ -318,13 +301,7 @@ body>section,article {
     }
 
 .project-info h2 {
-    font-size: 2em;
-    font-weight: 400;
     margin-bottom: 10px;
-}
-
-.project-tags {
-
 }
 
 .project-tags li {
@@ -351,14 +328,20 @@ body>section,article {
 
 /*--- ABOUT ME ---*/
 
-#aboutme-container {
+#aboutme {
     background: #f6f6f6;
 }
 
-#aboutme-container h1 {
-    font-weight: 600;
-    font-size: 2.5em;
+.aboutme-content h1, h2 {
     margin-bottom: 20px;
+}
+
+.aboutme-content h2 {
+    text-align: center;
+}
+
+.aboutme-content h3 {
+    margin-bottom: 10px;
 }
 
 .aboutme-content {
@@ -372,13 +355,9 @@ body>section,article {
 }
 
 .aboutme-content p {
-    margin: 10px 0;
+    margin: 20px 0;
     line-height: normal;
     text-align: justify;
-}
-
-.technical span {
-    text-decoration: underline;
 }
 
 .technical ul {
@@ -413,13 +392,6 @@ body>section,article {
         }
     }
 
-#aboutme-container h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
 /*--- BLOG ---*/
 
 .post {
@@ -429,14 +401,6 @@ body>section,article {
     flex-direction: column;
     border-bottom: #EBF2F6 1px solid;
 }
-
-/*
-.post-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-*/
 
 .post-title {
     font-size: 2em;
@@ -492,31 +456,26 @@ body>section,article {
 }
 
 .contact h1 {
-    font-size: 40px;
     line-height: 46px;
-    font-weight: 600;
 }
 
 .contact h2 {
-    font-size: 28px;
+    font-size: 1.7em;
     line-height: 36px;
-    font-weight: 300;
 }
 
 /*--- FOOTER ---*/
 
 .site-footer {
-    /*background-color: #1A1A1A;*/
-    /*border-top: 4px #168BBB solid;*/
     /*box-shadow: inset 0 10px 10px -10px #DDD;*/
     background-color: #34495E;
     height: 75px;
-    /*padding: 0 30px;*/
     color: #ddd;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     font-weight: 300;
+    padding: 0 30px;
 }
 
 .site-footer a {
@@ -525,17 +484,22 @@ body>section,article {
 
 .copyright {
     line-height: 75px;
-    margin-left: 30px;
 }
 
 .footer-social-icons {
     text-align: right;
     line-height: 75px;
     font-size: 2em;
-    margin-right: 30px;
+    display: none;
 }
 
 .footer-social-icons li {
     display: inline-block;
     margin-left: 15px;
 }
+
+    @media only screen and (min-width: 750px) {
+        .footer-social-icons {
+            display: inherit;
+        }
+    }
