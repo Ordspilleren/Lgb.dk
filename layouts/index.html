@@ -5,7 +5,7 @@
         <h1>Projects</h1>
         {{ range .Site.Data.projects }}
         <article class="project">
-            <div><img src="img/{{ .img }}" alt="" /></div>
+            <div><img src="img/{{ .img }}" alt="{{ .title }}" /></div>
             <div class="project-info">
                 <h2>{{ .title }}</h2>
                 <ul class="project-tags">
@@ -57,7 +57,7 @@
             <div class="non-technical">
                 <h2>Non-Technical</h2>
                 <p>
-                    I am Lasse G. Bjerre, designer / developer and tech lover based in Aalborg, Denmark.
+                    I am Lasse G. Bjerre, designer / developer and tech enthusiast based in Aalborg, Denmark.
                     I love technology and everything it brings with it, and I have developed a passion for it like no other over the years. Along with my passion for technology comes my passion to create. Getting an idea and making it come to life is something I value very highly.
 
                     I create websites, media products and solve IT related problems. I very much see myself as a Jack of all trades.
