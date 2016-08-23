@@ -56,7 +56,7 @@ body {
     background-color: #fff;
     color: #444;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .container {
@@ -415,12 +415,14 @@ nav {
 
 .post-excerpt {
     margin-bottom: 10px;
-    line-height: normal;
+    line-height: 2;
+    font-size: 1.125rem;
 }
 
 .post-content {
     margin: 20px 0;
-    line-height: normal;
+    line-height: 2;
+    font-size: 1.125rem;
 }
 
 .post-meta {
