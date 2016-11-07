@@ -55,8 +55,14 @@ html {
 body {
     background-color: #fff;
     color: #444;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+strong {
+    color: #222;
 }
 
 .container {
@@ -71,12 +77,12 @@ body>section,article {
 
 a, .header-show-menu {
     text-decoration: none;
-    color: #999;
+    color: #3498DB;
     transition: .2s;
 }
 
 a:hover, .header-show-menu:hover {
-    color: #3498DB !important;
+    color: #34495E !important;
 }
 
 h1 {
@@ -232,6 +238,10 @@ nav {
     text-transform: uppercase;
 }
 
+.header-feature h1, .header-feature h2 {
+    color: #fff;
+}
+
 .header-feature img {
     width: 120px;
     height: 120px;
@@ -251,9 +261,6 @@ nav {
 }
 
 /*--- PROJECTS ---*/
-
-#projects {
-}
 
 .project {
     padding: 20px 0;
@@ -397,7 +404,7 @@ nav {
 
 .post {
     padding-bottom: 2rem;
-    max-width: 800px;
+    max-width: 50em;
     display: flex;
     flex-direction: column;
     border-bottom: #EBF2F6 1px solid;
@@ -415,14 +422,12 @@ nav {
 
 .post-excerpt {
     margin-bottom: 10px;
-    line-height: 2;
-    font-size: 1.125rem;
+    line-height: 1.5;
 }
 
 .post-content {
-    margin: 20px 0;
-    line-height: 2;
-    font-size: 1.125rem;
+    margin: 2em 0;
+    line-height: 1.5;
 }
 
 .post-meta {
