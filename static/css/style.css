@@ -326,7 +326,7 @@ nav {
 .project-info p {
     margin: 20px 0 10px 0;
     word-wrap: break-word;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 .project-links li {
@@ -364,7 +364,7 @@ nav {
 
 .aboutme-content p {
     margin: 20px 0;
-    line-height: normal;
+    line-height: 1.5;
     text-align: justify;
 }
 
