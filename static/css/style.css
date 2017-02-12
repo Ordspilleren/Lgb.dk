@@ -82,7 +82,7 @@ a, .header-show-menu {
 }
 
 a:hover, .header-show-menu:hover {
-    color: #34495E !important;
+    color: #2773A6 !important;
 }
 
 h1 {
@@ -319,13 +319,13 @@ nav {
     border-radius: 5px;
     font-weight: 300;
     color: #FFF;
-    text-shadow: 2px 2px 2px #000;
     text-transform: uppercase;
 }
 
 .project-info p {
     margin: 20px 0 10px 0;
     word-wrap: break-word;
+    text-align: justify;
     line-height: 1.5;
 }
 
