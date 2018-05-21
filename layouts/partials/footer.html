@@ -1,5 +1,5 @@
     <footer class="site-footer">
-        <p class="copyright">&copy; {{ .Now.Year }} {{ .Site.Author.name }}. All Rights Reserved.</p>
+        <p class="copyright">&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}. All Rights Reserved.</p>
         <ul class="footer-social-icons">
             <li><a href="{{ .Site.Author.github }}" title="Github"><i class="fa fa-github"></i></a></li>
             <li><a href="{{ .Site.Author.steam }}" title="Steam"><i class="fa fa-steam"></i></a></li>
