@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     {{ if .IsPage }}<link rel="stylesheet" href="/css/github-markdown.css" media="screen" charset="utf-8">{{ end }}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="/index.xml" rel="alternate" type="application/rss+xml" title="RSS">
     <meta name="description" content="Portfolio for Lasse Bjerre, a technology enthusiast and coffee drinker">
     <title>{{ .Site.Title }}</title>
@@ -29,9 +29,9 @@
                 <li><a href="/post">Blog</a></li>
             </ul>
             <ul class="nav-social-icons">
-                <li><a href="{{ .Site.Author.github }}" title="Github"><i class="fa fa-github"></i></a></li>
-                <li><a href="{{ .Site.Author.linkedin }}" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="mailto:{{ .Site.Author.mail }}" title="Send me a mail!"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="{{ .Site.Author.github }}" title="Github"><i class="fab fa-github-square"></i></a></li>
+                <li><a href="{{ .Site.Author.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="mailto:{{ .Site.Author.mail }}" title="Send me an email!"><i class="fas fa-envelope-square"></i></a></li>
             </ul>
         </nav>
         {{ if not .Params.cover }}
