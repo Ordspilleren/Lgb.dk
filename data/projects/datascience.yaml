@@ -1,0 +1,10 @@
+order: 2
+title: Data Science Assignments
+tags:
+- Python
+- R
+- TensorFlow
+- Keras
+github: https://github.com/Ordspilleren/text-color-prediction
+img: datascience.png
+description: For a data science course at university, I did a bunch of assignments in data analysis and machine learning utilizing, among others, Python and Keras. One of those was a Convolutional Neural Network that guesses which font color would be optimal for a given background color.

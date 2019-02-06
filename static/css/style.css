@@ -55,7 +55,7 @@ html {
 body {
     background-color: #fff;
     color: #444;
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
 
@@ -133,7 +133,6 @@ section > .container > h1 {
     left: 20px;
     display: inline-block;
     color: #FFF;
-    font-weight: 300;
     font-size: 1em;
     letter-spacing: 1px;
     cursor: pointer;
@@ -184,7 +183,6 @@ nav {
 .nav-links li {
     margin-bottom: 10px;
     font-size: 1em;
-    font-weight: 300;
     letter-spacing: 1px;
     text-shadow: 2px 2px 2px #000;
     text-transform: uppercase;
@@ -280,15 +278,14 @@ nav {
 }
 */
 
-.project img {
-    box-shadow: 2px 4px 8px #999;
-    margin-bottom: 25px;
-    width: 100%;
-	border-radius: 1em;
+.project > .image {
+    margin-bottom: 1rem;
 }
 
-.project-info {
-    margin: 0 20px;
+.project > .image > img {
+    box-shadow: 2px 4px 8px #999;
+    width: 100%;
+	border-radius: 1rem;
 }
 
     @media only screen and (min-width: 750px) {
@@ -304,14 +301,14 @@ nav {
             margin: 0 25px 0 0;
         }
 
-        .project img {
+        .project .image {
             margin-bottom: 0;
-            flex: 1 1 50%;
+            flex: 1;
         }
 
         .project-info {
             margin-left: 25px;
-            flex: 1 1 50%;
+            flex: 1;
         }
     }
 
@@ -362,9 +359,6 @@ nav {
 
 .aboutme-content h3 {
     margin-bottom: 10px;
-}
-
-.aboutme-content {
 }
 
 .technical {
@@ -438,6 +432,7 @@ nav {
 .post-content {
     margin: 2em 0;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .post-meta {

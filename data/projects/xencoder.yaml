@@ -1,8 +1,0 @@
-title: Xencoder
-tags:
-- C#
-- FFmpeg
-website: /#
-github: /#
-img: xencoder.png
-description: Xencoder is another side project of mine. I needed a simple application to convert video files into a format that could be used for Youtube, but I could not find one that was simple enough for my needs, so I made one. The application itself is written in C#. It uses the FFmpeg framework for the encoding of the video.

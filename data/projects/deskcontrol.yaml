@@ -1,0 +1,8 @@
+order: 3
+title: DeskControl
+tags:
+- C++
+- ESP8266
+github: https://github.com/Ordspilleren/DeskControl
+img: deskcontrol.png
+description: I bought a used standing desk, but this unfortunately had no way to set a specific height to raise to. Using an ESP8266, I improved upon an already reverse engineered protocol for my desk by also making it WiFi enabled!
