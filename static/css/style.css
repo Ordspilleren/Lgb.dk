@@ -77,12 +77,13 @@ body>section,article {
 
 a, .header-show-menu {
     text-decoration: none;
-    color: #3498DB;
+    color: #0395DE;
     transition: .2s;
 }
 
 a:hover, .header-show-menu:hover {
-    color: #2773A6 !important;
+    color: #0395DE !important;
+    text-decoration: underline;
 }
 
 h1 {
@@ -117,7 +118,7 @@ section > .container > h1 {
     flex-direction: column;
 }
 
-    @media only screen and (min-width: 750px) {
+    @media (min-width: 768px) {
         .site-header {
             padding: 0 20px;
         }
@@ -140,7 +141,7 @@ section > .container > h1 {
     z-index: 30;
 }
 
-    @media only screen and (min-width: 750px) {
+    @media (min-width: 768px) {
         .header-show-menu {
             display: none;
         }
@@ -159,7 +160,7 @@ nav {
     z-index: 20;
 }
 
-    @media only screen and (min-width: 750px) {
+    @media (min-width: 768px) {
         nav {
             position: static;
             width: auto;
@@ -200,7 +201,7 @@ nav {
     margin: 0 15px 0 0;
 }
 
-    @media only screen and (min-width: 750px) {
+    @media (min-width: 768px) {
         .nav-links {
             position: inherit;
             margin: 0;
@@ -288,7 +289,7 @@ nav {
 	border-radius: 1rem;
 }
 
-    @media only screen and (min-width: 750px) {
+    @media (min-width: 768px) {
         .project {
             flex-direction: row;
         }
@@ -390,7 +391,7 @@ nav {
     padding-top: 10px;
 }
 
-    @media only screen and (min-width: 750px) {
+    @media (min-width: 768px) {
         .aboutme-content {
             flex-direction: row;
         }
@@ -490,8 +491,8 @@ nav {
     height: 75px;
     color: #ddd;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
     font-weight: 300;
     padding: 0 20px;
 }
@@ -502,13 +503,13 @@ nav {
 
 .copyright {
     line-height: 75px;
+    display: none;
 }
 
 .footer-social-icons {
     text-align: right;
     line-height: 75px;
     font-size: 2em;
-    display: none;
 }
 
 .footer-social-icons li {
@@ -516,8 +517,16 @@ nav {
     margin-left: 15px;
 }
 
-    @media only screen and (min-width: 750px) {
-        .footer-social-icons {
+.footer-social-icons li:first-child {
+    margin-left: 0;
+}
+
+    @media (min-width: 768px) {
+        .copyright {
             display: inherit;
+        }
+
+        .site-footer {
+            justify-content: space-between;
         }
     }
